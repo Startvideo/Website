@@ -167,23 +167,8 @@
             background-color: #777;
         }
 
-        /* Make video responsive */
-        video {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Target mobile devices and increase video size */
-        @media only screen and (max-width: 768px) {
-            video {
-                transform: scale(1.2);
-                transform-origin: top center;
-            }
-
-            .couple-name {
-                margin-top: 20px;
-            }
-
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
             .video-container {
                 gap: 2cm;
                 margin-top: 3cm;
@@ -193,11 +178,13 @@
                 /* Center videos horizontally */
             }
 
-            .video-container iframe {
+            .video-and-name-container iframe {
                 width: 100%;
                 max-width: 560px;
                 /* Limit video width for smaller screens */
                 height: auto;
+                transform: scale(1.2);
+                transform-origin: top center;
             }
 
             .video-and-name-container {
@@ -255,31 +242,6 @@
                 margin-top: 4cm;
                 /* Increased margin above the contact form */
                 margin-bottom: 30px;
-            }
-
-            .video-and-name-container iframe {
-                width: 100%;
-                height: auto;
-                /* Ensure the height adjusts proportionally */
-            }
-
-            .video-and-name-container {
-                position: relative;
-                width: 100%;
-                /* Adjust width to 100% for smaller screens */
-                margin-bottom: 10px;
-                /* Add spacing between the video and the following content */
-            }
-
-            .couple-name {
-                position: static;
-                /* Use static positioning to stack the name below the video */
-                text-align: center;
-                /* Center the text */
-                margin-top: 5px;
-                /* Add some space between the video and the name */
-                font-size: 16px;
-                /* Adjust font size */
             }
         }
     </style>
