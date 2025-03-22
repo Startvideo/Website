@@ -156,11 +156,8 @@
             font-size: 16px;
             font-style: italic;
             font-family: Georgia, serif;
-            /* NEW CODE BELOW */
             display: block;
-            /* Make it a block-level element */
             margin: 10px auto;
-            /* Center horizontally and add some margin */
         }
 
         .contact-form button:hover {
@@ -173,38 +170,31 @@
                 gap: 2cm;
                 margin-top: 3cm;
                 flex-direction: column;
-                /* Stack videos vertically */
                 align-items: center;
-                /* Center videos horizontally */
             }
 
             .video-and-name-container iframe {
                 width: 100%;
                 max-width: 560px;
-                /* Limit video width for smaller screens */
                 height: auto;
-		    transform: scale(1.2);
-            transform-origin: top center;
+                transform: scale(1.2);
+                transform-origin: top center;
             }
 
             .video-and-name-container {
                 width: 100%;
                 text-align: center;
-                /* Center the name */
             }
 
             .couple-name {
                 position: static;
-                /* Remove absolute positioning */
                 margin-top: 0.5cm;
-                /* Add space between video and name */
                 text-align: center;
             }
 
             .form-container {
                 flex-direction: column;
                 padding: 0 10px;
-                /* Add left and right padding */
             }
 
             .left-column,
@@ -215,13 +205,11 @@
 
             .contact-form textarea {
                 height: 150px;
-                /* Adjust height to match left column */
                 position: static;
             }
 
             .contact-form input[type="date"],
             .contact-form input,
-            /* applies the style to every input field */
             .contact-form textarea {
                 color: #777;
             }
@@ -233,14 +221,11 @@
 
             .contact-form button {
                 width: 100%;
-                /* Make the button full-width */
                 margin-top: 8px;
-                /* Add spacing */
             }
 
             .contact-form {
                 margin-top: 4cm;
-                /* Increased margin above the contact form */
                 margin-bottom: 30px;
             }
         }
@@ -251,67 +236,3 @@
 
     <header>
         <div class="horizontal-line"></div>
-        <div style="margin: 25px 0;">
-            <img src="StartVideoLogo copy.jpg" alt="Logo" style="max-width: 400px; width: 100%; height:auto;">
-        </div>
-        <div class="horizontal-line"></div>
-    </header>
-
-    <main>
-        <h1 style="font-weight: normal;">Capturing the Start of Your Happily Ever After</h1>
-
-        <p>
-            Your wedding day will be a beautiful moment that will pass in a flash. Our expert team of videographers and editors is dedicated to creating heartfelt films that beautifully preserve the essence and emotions of that day.
-        </p>
-
-        <p>
-            With exquisite attention to detail and a passion for storytelling, we aim to deliver stunning cinematic creations that allow you to relive your cherished moments for a lifetime.
-        </p>
-
-        <div class="video-container">
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/129388643" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">Jessica & Brian</div>
-            </div>
-
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/157802983" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">M & S</div>
-            </div>
-
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/87614376" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">Linda & Michael</div>
-            </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Contact us for availability and pricing</h2>
-            <form action="https://formspree.io/f/mkgjjvjo" method="POST">
-                <div class="form-container">
-                    <div class="left-column">
-                        <input type="text" name="name" placeholder="Name *" required>
-                        <input type="email" name="email" placeholder="Email *" required>
-                        <input type="date" name="wedding_date" placeholder="Date *" required autocomplete="off" value="">
-                    </div>
-                    <div class="right-column">
-                        <textarea name="message" placeholder="Message *" required rows="4"></textarea>
-                    </div>
-                </div>
-                <input type="hidden" name="_subject" value="New StartVideo Contact Form Submission">
-                <input type="hidden" name="_next" value="https://Startvideo.github.io/thank-you.html">
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="_honey" style="display:none">
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-
-    </main>
-</body>
-
-</html>
