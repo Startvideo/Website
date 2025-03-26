@@ -274,34 +274,39 @@
 
     </main>
 
-    <script>
-    function resizeVideos() {
-        var debugMessage = document.getElementById('debug-message');
-        debugMessage.innerHTML = 'Window width: ' + window.innerWidth + 'px';
+   <script>
+function resizeVideos() {
+    var debugMessage = document.getElementById('debug-message');
+    debugMessage.innerHTML = 'Window width: ' + window.innerWidth + 'px';
+    debugMessage.style.display = 'block'; // Make sure debug message is visible
 
-        if (window.innerWidth <= 768) {
-            debugMessage.innerHTML += ' | Applying mobile styles';
-            var videos = document.querySelectorAll('.video-and-name-container iframe');
-            videos.forEach(function(video, index) {
-                video.style.width = '130%';
-                video.style.marginLeft = '-15%';
-                video.style.height = (video.offsetWidth * 9 / 16) + 'px';
-                debugMessage.innerHTML += '<br>Video ' + (index + 1) + ' size: ' + video.offsetWidth + 'x' + video.offsetHeight;
-            });
-        } else {
-            debugMessage.innerHTML += ' | Applying desktop styles';
-            var videos = document.querySelectorAll('.video-and-name-container iframe');
-            videos.forEach(function(video) {
-                video.style.width = '100%';
-                video.style.marginLeft = '0';
-                video.style.height = '510px';
-            });
-        }
+    var videos = document.querySelectorAll('.video-and-name-container iframe');
+    if (window.innerWidth <= 768) {
+        debugMessage.innerHTML += ' | Mobile view';
+        videos.forEach(function(video, index) {
+            video.style.border = '5px solid red';
+            video.style.width = '130%';
+            video.style.marginLeft = '-15%';
+            debugMessage.innerHTML += '<br>Video ' + (index + 1) + ' styled';
+        });
+    } else {
+        debugMessage.innerHTML += ' | Desktop view';
+        videos.forEach(function(video) {
+            video.style.border = 'none';
+            video.style.width = '100%';
+            video.style.marginLeft = '0';
+        });
     }
+}
 
-    window.addEventListener('load', resizeVideos);
-    window.addEventListener('resize', resizeVideos);
-    </script>
+// Run on page load and whenever window is resized
+window.addEventListener('load', resizeVideos);
+window.addEventListener('resize', resizeVideos);
+
+// Force a resize check after a short delay
+setTimeout(resizeVideos, 1000);
+</script>
+
 </body>
 
 </html>
