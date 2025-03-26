@@ -159,7 +159,7 @@
             background-color: #777;
         }
 
-        /* Media Queries for Mobile Responsiveness */
+       /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .video-container {
         gap: 2cm;
@@ -168,16 +168,16 @@
         align-items: center;
     }
 
-    .video-and-name-container iframe {
-        width: 200%; /* Increase width by 30% */
-        height: auto; /* Maintain aspect ratio */
-        transform: none; /* Remove scaling to avoid conflicts */
-        margin-left: -15%; /* Center the video after increasing its size */
+    .video-and-name-container {
+        width: 100%; /* Ensure the container takes full width */
+        text-align: center;
     }
 
-    .video-and-name-container {
-        width: 100%;
-        text-align: center;
+    .video-and-name-container iframe {
+        width: 130%; /* Increase video size by 30% */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: -15%; /* Center the enlarged video */
+        display: block; /* Ensure proper alignment */
     }
 
     .couple-name {
@@ -191,6 +191,7 @@
         padding: 0 10px;
     }
 }
+
 
 
             .left-column,
