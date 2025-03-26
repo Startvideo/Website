@@ -203,6 +203,7 @@
 </head>
 
 <body>
+    <div style="background-color: yellow; padding: 10px; text-align: center;">TEST BANNER - If you see this, HTML update is working</div>
 
     <header>
         <div class="horizontal-line"></div>
@@ -213,7 +214,6 @@
     </header>
 
     <main>
-        <div id="debug-message" style="background-color: red; color: white; padding: 10px; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;"></div>
         <h1 style="font-weight: normal;">Capturing the Start of Your Happily Ever After</h1>
 
         <p>
@@ -274,39 +274,9 @@
 
     </main>
 
-   <script>
-function resizeVideos() {
-    var debugMessage = document.getElementById('debug-message');
-    debugMessage.innerHTML = 'Window width: ' + window.innerWidth + 'px';
-    debugMessage.style.display = 'block'; // Make sure debug message is visible
-
-    var videos = document.querySelectorAll('.video-and-name-container iframe');
-    if (window.innerWidth <= 768) {
-        debugMessage.innerHTML += ' | Mobile view';
-        videos.forEach(function(video, index) {
-            video.style.border = '5px solid red';
-            video.style.width = '130%';
-            video.style.marginLeft = '-15%';
-            debugMessage.innerHTML += '<br>Video ' + (index + 1) + ' styled';
-        });
-    } else {
-        debugMessage.innerHTML += ' | Desktop view';
-        videos.forEach(function(video) {
-            video.style.border = 'none';
-            video.style.width = '100%';
-            video.style.marginLeft = '0';
-        });
-    }
-}
-
-// Run on page load and whenever window is resized
-window.addEventListener('load', resizeVideos);
-window.addEventListener('resize', resizeVideos);
-
-// Force a resize check after a short delay
-setTimeout(resizeVideos, 1000);
-</script>
-
+    <script>
+    document.body.style.backgroundColor = 'lightblue';
+    </script>
 </body>
 
 </html>
