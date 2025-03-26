@@ -228,6 +228,22 @@
                 margin-top: 4cm;
                 margin-bottom: 30px;
             }
+
+            /* Increase video size on mobile */
+            .video-and-name-container iframe {
+                width: 130%; /* Increase width by 30% */
+                height: auto; /* Adjust height automatically */
+                max-width: none; /* Remove max-width restriction */
+                transform: none; /* Remove initial transform */
+                transform-origin: unset; /* Remove initial transform origin */
+            }
+
+            .video-and-name-container {
+                display: flex; /* Use flexbox */
+                justify-content: center; /* Horizontally center the content */
+                align-items: center; /* Vertically center the content */
+                margin-left: -15%; /* Reset margin and shift to center */
+            }
         }
     </style>
 </head>
