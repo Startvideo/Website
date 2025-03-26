@@ -159,56 +159,29 @@
             background-color: #777;
         }
 
-       /* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .video-container {
-        gap: 2cm;
-        margin-top: 3cm;
-        flex-direction: column;
-        align-items: center;
-    }
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .video-container {
+                gap: 2cm;
+                margin-top: 3cm;
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .video-and-name-container {
-        width: 100%; /* Ensure the container takes full width */
-        text-align: center;
-    }
-
-    .video-and-name-container iframe {
-        width: 130%; /* Increase video size by 30% */
-        height: auto; /* Maintain aspect ratio */
-        margin-left: -15%; /* Center the enlarged video */
-        display: block; /* Ensure proper alignment */
-    }
-
-    .couple-name {
-        position: static;
-        margin-top: 0.5cm;
-        text-align: center;
-    }
-
-    .form-container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-}
-
-
-
-            .left-column,
-            .right-column {
+            .video-and-name-container {
                 width: 100%;
-                margin-left: 0;
+                text-align: center;
             }
 
-            .contact-form textarea {
-                height: 150px;
+            .couple-name {
                 position: static;
+                margin-top: 0.5cm;
+                text-align: center;
             }
 
-            .contact-form input[type="date"],
-            .contact-form input,
-            .contact-form textarea {
-                color: #777;
+            .form-container {
+                flex-direction: column;
+                padding: 0 10px;
             }
 
             main p {
@@ -277,28 +250,4 @@
         <div class="contact-form">
             <h2>Contact us for availability and pricing</h2>
             <form action="https://formspree.io/f/mkgjjvjo" method="POST">
-                <div class="form-container">
-                    <div class="left-column">
-                        <input type="text" name="name" placeholder="Name *" required>
-                        <input type="email" name="email" placeholder="Email *" required>
-                        <label for="wedding_date">Date *
-                            <input type="date" id="wedding_date" name="wedding_date" required>
-                        </label>
-                    </div>
-                    <div class="right-column">
-                        <textarea name="message" placeholder="Message *" required rows="4"></textarea>
-                    </div>
-                </div>
-                <input type="hidden" name="_subject" value="New StartVideo Contact Form Submission">
-                <input type="hidden" name="_next" value="https://startvideo.ca/thank-you.html">
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="_honey" style="display:none">
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-
-    </main>
-</body>
-
-</html>
+                <div cla
