@@ -274,31 +274,32 @@
 
     </main>
 
-    <script>
-        document.body.style.backgroundColor = 'lightblue'; // This should change the background color
-        console.log('JavaScript is running'); // This will log in desktop dev tools
+   <script>
+    document.body.style.backgroundColor = 'lightblue'; // This should change the background color
+    console.log('JavaScript is running'); // This will log in desktop dev tools
 
-        function resizeVideos() {
-            if (window.innerWidth <= 768) {
-                var videos = document.querySelectorAll('.video-and-name-container iframe');
-                videos.forEach(function(video) {
-                    video.style.width = '130%';
-                    video.style.marginLeft = '-15%';
-                    video.style.height = (video.offsetWidth * 9 / 16) + 'px';
-                });
-            } else {
-                var videos = document.querySelectorAll('.video-and-name-container iframe');
-                videos.forEach(function(video) {
-                    video.style.width = '100%';
-                    video.style.marginLeft = '0';
-                    video.style.height = '510px';
-                });
-            }
+    function resizeVideos() {
+        if (window.innerWidth <= 768) {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '130%';
+                video.style.marginLeft = '-15%';
+                video.style.height = (video.offsetWidth * 9 / 16) + 'px';
+            });
+        } else {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '100%';
+                video.style.marginLeft = '0';
+                video.style.height = '510px';
+            });
         }
+    }
 
-        window.addEventListener('load', resizeVideos);
-        window.addEventListener('resize', resizeVideos);
-    </script>
+    window.addEventListener('load', resizeVideos);
+    window.addEventListener('resize', resizeVideos);
+</script>
+
 </body>
 
 </html>
