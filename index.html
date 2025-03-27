@@ -203,7 +203,6 @@
 </head>
 
 <body>
-    <div style="background-color: yellow; padding: 10px; text-align: center;">TEST BANNER - If you see this, HTML update is working</div>
 
     <header>
         <div class="horizontal-line"></div>
@@ -275,29 +274,29 @@
     </main>
 
     <script>
-        console.log('JavaScript is running');
+    console.log('JavaScript is running');
 
-        function resizeVideos() {
-            if (window.innerWidth <= 768) {
-                var videos = document.querySelectorAll('.video-and-name-container iframe');
-                videos.forEach(function (video) {
-                    video.style.width = '80%'; // Reduced video width on mobile
-                    video.style.marginLeft = '10%'; // Correctly center the video
-                    video.style.height = (video.offsetWidth * 9 / 16) + 'px';
-                });
-            } else {
-                var videos = document.querySelectorAll('.video-and-name-container iframe');
-                videos.forEach(function (video) {
-                    video.style.width = '100%';
-                    video.style.marginLeft = '0';
-                    video.style.height = '510px';
-                });
-            }
+    function resizeVideos() {
+        if (window.innerWidth <= 768) {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '120%'; // Increased video width on mobile
+                video.style.marginLeft = '-10%'; // Adjusted margin to center
+                video.style.height = (video.offsetWidth * 9 / 16) + 'px';
+            });
+        } else {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '100%';
+                video.style.marginLeft = '0';
+                video.style.height = '510px';
+            });
         }
+    }
 
-        window.addEventListener('load', resizeVideos);
-        window.addEventListener('resize', resizeVideos);
-    </script>
+    window.addEventListener('load', resizeVideos);
+    window.addEventListener('resize', resizeVideos);
+</script>
 
 </body>
 
