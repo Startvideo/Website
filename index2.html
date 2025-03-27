@@ -66,11 +66,6 @@
             margin-top: 3cm;
         }
 
-        .video-container iframe {
-            width: 907px;
-            height: 510px;
-        }
-
         .video-and-name-container {
             position: relative;
             width: 907px;
@@ -173,14 +168,6 @@
                 align-items: center;
             }
 
-            .video-and-name-container iframe {
-                width: 100%;
-                max-width: 560px;
-                height: auto;
-                transform: scale(1.2);
-                transform-origin: top center;
-            }
-
             .video-and-name-container {
                 width: 100%;
                 text-align: center;
@@ -195,23 +182,6 @@
             .form-container {
                 flex-direction: column;
                 padding: 0 10px;
-            }
-
-            .left-column,
-            .right-column {
-                width: 100%;
-                margin-left: 0;
-            }
-
-            .contact-form textarea {
-                height: 150px;
-                position: static;
-            }
-
-            .contact-form input[type="date"],
-            .contact-form input,
-            .contact-form textarea {
-                color: #777;
             }
 
             main p {
@@ -233,6 +203,7 @@
 </head>
 
 <body>
+    <div style="background-color: yellow; padding: 10px; text-align: center;">TEST BANNER - If you see this, HTML update is working</div>
 
     <header>
         <div class="horizontal-line"></div>
@@ -284,14 +255,16 @@
                     <div class="left-column">
                         <input type="text" name="name" placeholder="Name *" required>
                         <input type="email" name="email" placeholder="Email *" required>
-                        <input type="date" name="wedding_date" placeholder="Date *" required autocomplete="off" value="">
+                        <label for="wedding_date">Date *
+                            <input type="date" id="wedding_date" name="wedding_date" required>
+                        </label>
                     </div>
                     <div class="right-column">
                         <textarea name="message" placeholder="Message *" required rows="4"></textarea>
                     </div>
                 </div>
                 <input type="hidden" name="_subject" value="New StartVideo Contact Form Submission">
-                <input type="hidden" name="_next" value="https://Startvideo.github.io/thank-you.html">
+                <input type="hidden" name="_next" value="https://startvideo.ca/thank-you.html">
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="_honey" style="display:none">
                 </div>
@@ -300,6 +273,33 @@
         </div>
 
     </main>
+
+   <script>
+    document.body.style.backgroundColor = 'lightblue'; // This should change the background color
+    console.log('JavaScript is running'); // This will log in desktop dev tools
+
+    function resizeVideos() {
+        if (window.innerWidth <= 768) {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '130%';
+                video.style.marginLeft = '-15%';
+                video.style.height = (video.offsetWidth * 9 / 16) + 'px';
+            });
+        } else {
+            var videos = document.querySelectorAll('.video-and-name-container iframe');
+            videos.forEach(function(video) {
+                video.style.width = '100%';
+                video.style.marginLeft = '0';
+                video.style.height = '510px';
+            });
+        }
+    }
+
+    window.addEventListener('load', resizeVideos);
+    window.addEventListener('resize', resizeVideos);
+</script>
+
 </body>
 
 </html>
