@@ -92,40 +92,44 @@
             text-align: left;
             font-family: Georgia, serif;
             font-style: italic;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .contact-form h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
             color: #333;
             font-weight: normal;
-            text-align: center;
+            position: relative;
+            top: -0.5cm;
+            text-align: left;
+            padding-left: 0.6cm;
         }
 
         .form-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
 
-        .left-column, .right-column {
+        .left-column {
             width: 48%;
+        }
+
+        .right-column {
+            width: 48%;
+            margin-left: -4.025px;
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
             font-family: Georgia, serif;
             font-size: 16px;
             font-style: italic;
             box-sizing: border-box;
+            background-color: #f9f9f9;
         }
 
         .contact-form input {
@@ -134,22 +138,22 @@
 
         .contact-form textarea {
             height: 130px;
-            resize: vertical;
+            position: relative;
+            left: 6px;
+            resize: none;
         }
 
         .contact-form button {
             background-color: #999;
             color: white;
-            padding: 12px 20px;
+            padding: 8px 16px;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
             font-style: italic;
             font-family: Georgia, serif;
             display: block;
-            margin: 20px auto 0;
-            transition: background-color 0.3s;
+            margin: 10px auto;
         }
 
         .contact-form button:hover {
@@ -178,10 +182,7 @@
 
             .form-container {
                 flex-direction: column;
-            }
-
-            .left-column, .right-column {
-                width: 100%;
+                padding: 0 10px;
             }
 
             main p {
@@ -189,14 +190,14 @@
                 font-size: 17px;
             }
 
+            .contact-form button {
+                width: 100%;
+                margin-top: 8px;
+            }
+
             .contact-form {
                 margin-top: 4cm;
                 margin-bottom: 30px;
-                padding: 15px;
-            }
-
-            .contact-form button {
-                width: 100%;
             }
         }
     </style>
@@ -278,8 +279,8 @@
         if (window.innerWidth <= 768) {
             var videos = document.querySelectorAll('.video-and-name-container iframe');
             videos.forEach(function(video) {
-                video.style.width = '90%';
-                video.style.marginLeft = '5%';
+                video.style.width = '95%';
+                video.style.marginLeft = '2.5%';
                 video.style.height = (video.offsetWidth * 9 / 16) + 'px';
             });
         } else {
