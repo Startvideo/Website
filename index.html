@@ -135,6 +135,17 @@
             height: 40px;
         }
 
+        input[type="date"] {
+            -webkit-appearance: none;
+            appearance: none;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-style: italic;
+        }
+
         .contact-form textarea {
             height: 130px;
             position: relative;
@@ -275,7 +286,7 @@
                     <div class="left-column">
                         <input type="text" name="name" placeholder="Name *" required>
                         <input type="email" name="email" placeholder="Email *" required>
-                        <input type="date" id="wedding_date" name="wedding_date" required>
+                        <input type="date" id="wedding_date" name="wedding_date" required value="2025-03-27">
                     </div>
                     <div class="right-column">
                         <textarea name="message" placeholder="Message *" required rows="4"></textarea>
@@ -299,8 +310,8 @@
         if (window.innerWidth <= 768) {
             var videos = document.querySelectorAll('.video-and-name-container iframe');
             videos.forEach(function(video) {
-                video.style.width = '98%';  // Increased by 3% from 95% to 98%
-                video.style.marginLeft = '1%';
+                video.style.width = '99%';  // Increased by 1% from 98% to 99%
+                video.style.marginLeft = '0.5%';
                 video.style.height = (video.offsetWidth * 9 / 16) + 'px';
             });
         } else {
