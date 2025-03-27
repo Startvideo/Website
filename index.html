@@ -92,39 +92,36 @@
             text-align: left;
             font-family: Georgia, serif;
             font-style: italic;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .contact-form h2 {
-            font-size: 16px;
-            margin-bottom: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
             color: #333;
             font-weight: normal;
-            position: relative;
-            top: -0.5cm;
-            text-align: left;
-            padding-left: 0.6cm;
+            text-align: center;
         }
 
         .form-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
         }
 
-        .left-column {
+        .left-column, .right-column {
             width: 48%;
-        }
-
-        .right-column {
-            width: 48%;
-            margin-left: -4.025px;
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 5px;
-            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
             font-family: Georgia, serif;
             font-size: 16px;
             font-style: italic;
@@ -137,22 +134,22 @@
 
         .contact-form textarea {
             height: 130px;
-            position: relative;
-            left: 6px;
-            resize: none;
+            resize: vertical;
         }
 
         .contact-form button {
             background-color: #999;
             color: white;
-            padding: 8px 16px;
+            padding: 12px 20px;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
             font-style: italic;
             font-family: Georgia, serif;
             display: block;
-            margin: 10px auto;
+            margin: 20px auto 0;
+            transition: background-color 0.3s;
         }
 
         .contact-form button:hover {
@@ -181,7 +178,10 @@
 
             .form-container {
                 flex-direction: column;
-                padding: 0 10px;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
             }
 
             main p {
@@ -189,14 +189,14 @@
                 font-size: 17px;
             }
 
-            .contact-form button {
-                width: 100%;
-                margin-top: 8px;
-            }
-
             .contact-form {
                 margin-top: 4cm;
                 margin-bottom: 30px;
+                padding: 15px;
+            }
+
+            .contact-form button {
+                width: 100%;
             }
         }
     </style>
@@ -254,9 +254,7 @@
                     <div class="left-column">
                         <input type="text" name="name" placeholder="Name *" required>
                         <input type="email" name="email" placeholder="Email *" required>
-                        <label for="wedding_date">Date *
-                            <input type="date" id="wedding_date" name="wedding_date" required>
-                        </label>
+                        <input type="date" id="wedding_date" name="wedding_date" required>
                     </div>
                     <div class="right-column">
                         <textarea name="message" placeholder="Message *" required rows="4"></textarea>
@@ -280,8 +278,8 @@
         if (window.innerWidth <= 768) {
             var videos = document.querySelectorAll('.video-and-name-container iframe');
             videos.forEach(function(video) {
-                video.style.width = '120%'; // Increased video width on mobile
-                video.style.marginLeft = '-10%'; // Adjusted margin to center
+                video.style.width = '90%';
+                video.style.marginLeft = '5%';
                 video.style.height = (video.offsetWidth * 9 / 16) + 'px';
             });
         } else {
