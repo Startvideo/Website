@@ -129,7 +129,6 @@
             font-size: 16px;
             font-style: italic;
             box-sizing: border-box;
-            background-color: #f9f9f9;
         }
 
         .contact-form input {
@@ -198,6 +197,27 @@
             .contact-form {
                 margin-top: 4cm;
                 margin-bottom: 30px;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            .contact-form h2 {
+                font-size: 18px;
+                margin-bottom: 20px;
+                text-align: center;
+                padding-left: 0;
+                top: 0;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -279,8 +299,8 @@
         if (window.innerWidth <= 768) {
             var videos = document.querySelectorAll('.video-and-name-container iframe');
             videos.forEach(function(video) {
-                video.style.width = '95%';
-                video.style.marginLeft = '2.5%';
+                video.style.width = '98%';  // Increased by 3% from 95% to 98%
+                video.style.marginLeft = '1%';
                 video.style.height = (video.offsetWidth * 9 / 16) + 'px';
             });
         } else {
