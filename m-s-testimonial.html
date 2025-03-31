@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
+            background-color: white;
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
         }
 
         header {
@@ -20,29 +20,43 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
+            width: 100%;
+        }
+
+        .horizontal-line {
+            border-top: 2px solid #d3d3d3;
+            width: 100%;
+            margin: 0;
         }
 
         header img {
             max-width: 400px;
+            width: 100%;
+            height: auto;
         }
 
-        .container {
-            max-width: 800px;
-            margin-top: 150px; /* Adjusted for header spacing */
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        main {
+            text-align: center;
+            padding: 5px 20px;
+            margin-top: 200px;
         }
 
-        h1 {
+        main>h1 {
+            font-size: 17px;
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 19px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        main p {
+            font-size: 15px;
+            color: #666;
+            width: 70%;
+            margin: 0 auto 30px;
             text-align: center;
         }
-
-        p {
-            line-height: 1.6rem;
-        }
-
         a.back-link {
             display: inline-block;
             margin-top: 2rem;
@@ -56,30 +70,41 @@
         a.back-link:hover {
             background-color: #0056b3;
         }
+
+
     </style>
 </head>
 
 <body>
 
     <header>
-        <img src="StartVideoLogo copy.jpg" alt="Logo">
+        <div class="horizontal-line"></div>
+        <div style="margin: 25px 0;">
+            <img src="StartVideoLogo copy.jpg" alt="Logo" style="max-width: 400px; width: 100%; height:auto;">
+        </div>
+        <div class="horizontal-line"></div>
     </header>
 
-    <div class="container">
-        <h1>M & S's Testimonial</h1>
+    <main>
+        <h1 style="font-weight: normal;">M & S Testimonial</h1>
 
-        <!-- Full testimonial content -->
-        <p>Serge's video of our wedding day was truly a work of art! Both the highlight clip and full movie versions fully captured the essence of our day.</p>
+        <p>
+            Serge's video of our wedding day was truly a work of art! Both the highlight clip and full movie versions fully captured the essence of our day. 
+        </p>
 
-        <p>Serge has an amazing talent for being able to blend different parts of the video while creatively incorporating music to punctuate every unspoken thought and emotion. Watching the video has enabled us and our families to relive all the wonderful and joyous moments of that day.</p>
+        <p>
+            Serge has an amazing talent for being able to blend different parts of the video while creatively incorporating music to punctuate every unspoken thought and emotion. Watching the video has enabled us and our families to relive all the wonderful and joyous moments of that day.
+        </p>
 
-        <p>One of the best parts of working with Serge was that I never once felt that he was intrusive. He was able to film the wedding without interfering, yet captured every candid, funny, and heartwarming moment. Serge is highly professional and creates quality films that last a lifetime!</p>
+        <p>
+           One of the best parts of working with Serge was that I never once felt that he was intrusive. He was able to film the wedding without interfering, yet captured every candid, funny and heartwarming moment. Serge is highly professional, and creates quality films that last a lifetime!
+        </p>
 
-        <p>I highly recommend his services. The end result is nothing short of perfection. The quality of his work and services are truly unparalleled, and we are forever grateful to him for perfectly capturing the best day of our lives!!</p>
-
-        <!-- Back to main page link -->
-        <a href="index.html" class="back-link">Back to Main Page</a>
-    </div>
+        <p>
+            I highly recommend his services. The end result is nothing short of perfection. The quality of his work and services are truly unparalleled and we are forever grateful to him for perfectly capturing the best day of our lives!!
+        </p>
+    </main>
+      <a href="index.html" class="back-link">Back to Main Page</a>
 
 </body>
 
