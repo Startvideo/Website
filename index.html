@@ -4,351 +4,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Video Testimonials</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: white;
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
 
         header {
-            position: absolute;
-            top: 33px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
-            width: 100%;
+            padding: 20px;
         }
 
-        .horizontal-line {
-            border-top: 2px solid #d3d3d3;
-            width: 100%;
-            margin: 0;
-        }
-
-        header img {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-        }
-
-        main {
-            text-align: center;
-            padding: 5px 20px;
-            margin-top: 200px;
-        }
-
-        main>h1 {
-            font-size: 17px;
-            font-style: italic;
-            font-weight: normal;
-            margin-top: 19px;
-            margin-bottom: 30px;
-            color: #666;
-        }
-
-        main p {
-            font-size: 15px;
-            color: #666;
-            width: 70%;
-            margin: 0 auto 30px;
-            text-align: center;
+        h1 {
+            font-size: 24px;
+            color: #333;
         }
 
         .video-container {
             display: flex;
-            justify-content: center;
-            gap: 5cm;
-            flex-wrap: wrap;
-            margin-top: 3cm;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 900px;
         }
 
-        .video-and-name-container {
-            position: relative;
-            width: 907px;
+        .video-and-testimonial {
+            text-align: center;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .video-and-name-container iframe {
+        .video-and-testimonial iframe {
             width: 100%;
-            height: 510px;
+            height: 400px;
+            border-radius: 8px;
         }
 
         .couple-name {
-            position: absolute;
-            bottom: -0.9cm;
-            left: 0.3cm;
-            font-family: Georgia, serif;
-            font-size: 15px;
-            text-align: left;
-            width: 100%;
+            font-weight: bold;
+            margin-top: 1rem;
         }
 
-        .contact-form {
-            max-width: 800px;
-            margin: 5cm auto 50px;
-            text-align: left;
-            font-family: Georgia, serif;
+        .testimonial-snippet {
             font-style: italic;
+            color: #555;
+            margin-top: 1rem;
         }
 
-        .contact-form h2 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333;
-            font-weight: normal;
-            position: relative;
-            top: -0.5cm;
-            text-align: left;
-            padding-left: 0.6cm;
-        }
-
-        .form-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .left-column {
-            width: 48%;
-        }
-
-        .right-column {
-            width: 48%;
-            margin-left: -4.025px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 5px;
-            border: 1px solid #ccc;
-            font-family: Georgia, serif;
-            font-size: 16px;
-            font-style: italic;
-            box-sizing: border-box;
-        }
-
-        .contact-form input {
-            height: 40px;
-        }
-
-        input[type="date"] {
-            -webkit-appearance: none;
-            appearance: none;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: Georgia, serif;
-            font-size: 16px;
-            font-style: italic;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.8);
-        }
-
-        .contact-form textarea {
-            height: 130px;
-            position: relative;
-            left: 6px;
-            resize: none;
-        }
-
-        .contact-form button {
-            background-color: #999;
+        .testimonial-link {
+            display: inline-block;
+            margin-top: 1rem;
+            width: 30px;
+            height: 30px;
+            background-color: #007BFF;
             color: white;
-            padding: 8px 16px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            font-style: italic;
-            font-family: Georgia, serif;
-            display: block;
-            margin: 10px auto;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50%;
         }
 
-        .contact-form button:hover {
-            background-color: #777;
+        .testimonial-link:hover {
+            background-color: #0056b3;
         }
 
-        /* Media Queries for Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .video-container {
-                gap: 2cm;
-                margin-top: 3cm;
-                flex-direction: column;
-                align-items: center;
-            }
+        section.testimonial-full {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin-left:auto ;
+			margin-right:auto ;
+		}
 
-            .video-and-name-container {
-                width: 100%;
-                text-align: center;
-            }
+		h2 { 
+			font-weight:bold ;
+			text-align:center ;
+		}
 
-            .couple-name {
-                position: static;
-                margin-top: 0.5cm;
-                text-align: center;
-            }
+		p { 
+			line-height :1.6rem ;
+			margin-bottom :15 px ;
+		}
 
-            .form-container {
-                flex-direction: column;
-                padding: 0 10px;
-            }
+		a.back-link { 
+			display:inline-block ;
+			margin-top :20 px ;
+			padding :8px ;
+			background-color:#007BFF ;
+			color:white ;
+			border-radius:4px ;
+			text-decoration:none ;
+		}
 
-            main p {
-                width: 90%;
-                font-size: 17px;
-                text-align: justify;
-                text-align-last: center;
-                hyphens: auto;
-            }
-
-            .contact-form button {
-                width: 100%;
-                margin-top: 8px;
-            }
-
-            .contact-form {
-                margin-top: 4cm;
-                margin-bottom: 30px;
-                background-color: #f9f9f9;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            }
-
-            .contact-form h2 {
-                font-size: 18px;
-                margin-bottom: 20px;
-                text-align: center;
-                padding-left: 0;
-                top: 0;
-            }
-
-            .left-column, .right-column {
-                width: 100%;
-            }
-
-            .contact-form input,
-            .contact-form textarea {
-                margin-bottom: 15px;
-            }
-
-            input[type="date"] {
-                background-color: #f9f9f9;
-                color: #333;
-                border: 1px solid #ccc;
-                font-family: Georgia, serif;
-                font-size: 16px;
-                font-style: italic;
-            }
-
-            input[type="date"]::-webkit-calendar-picker-indicator {
-                filter: invert(0.8);
-            }
-        }
+		a.back-link:hover { 
+			background-color:#0056b3 ;
+		}
     </style>
 </head>
 
 <body>
 
     <header>
-        <div class="horizontal-line"></div>
-        <div style="margin: 25px 0;">
-            <img src="StartVideoLogo copy.jpg" alt="Logo" style="max-width: 400px; width: 100%; height:auto;">
-        </div>
-        <div class="horizontal-line"></div>
+        <h1>Our Video Testimonials</h1>
     </header>
 
-    <main>
-        <h1 style="font-weight: normal;">Capturing the Start of Your Happily Ever After</h1>
-
-        <p>
-            Your wedding day will be a beautiful moment that will pass in a flash. Our expert team of
-            videographers and editors is dedicated to creating heartfelt films that beautifully preserve
-            the essence and emotions of that day.
-        </p>
-
-        <p>
-            With exquisite attention to detail and a passion for storytelling, we aim to deliver stunning
-            cinematic creations that will allow you to relive your cherished moments for a lifetime.
-        </p>
-
-        <div class="video-container">
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/129388643" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">Jessica & Brian</div>
-            </div>
-
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/157802983" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">M & S</div>
-            </div>
-
-            <div class="video-and-name-container">
-                <iframe src="https://player.vimeo.com/video/87614376" frameborder="0" allow="autoplay; fullscreen"
-                    allowfullscreen></iframe>
-                <div class="couple-name">Linda & Michael</div>
-            </div>
+    <main class="video-container">
+        <!-- Testimonial for Jessica & Brian -->
+        <div class="video-and-testimonial">
+            <iframe src="https://player.vimeo.com/video/129388643" frameborder="0" allowfullscreen></iframe>
+            <div class="couple-name">Jessica & Brian</div>
+            <p class="testimonial-snippet">
+                "The end product was truly incredible. It really blew us away - he captured our most special moments
+                perfectly..."
+            </p>
+            <a href="#jessica-brian-testimonial" class="testimonial-link">+</a>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Contact us for availability and pricing</h2>
-            <form action="https://formspree.io/f/mkgjjvjo" method="POST">
-                <div class="form-container">
-                    <div class="left-column">
-                        <input type="text" name="name" placeholder="Name *" required>
-                        <input type="email" name="email" placeholder="Email *" required>
-                        <input type="date" id="wedding_date" name="wedding_date" required value="2025-03-27">
-                    </div>
-                    <div class="right-column">
-                        <textarea name="message" placeholder="Message *" required rows="4"></textarea>
-                    </div>
-                </div>
-                <input type="hidden" name="_subject" value="New StartVideo Contact Form Submission">
-                <input type="hidden" name="_next" value="https://startvideo.ca/thank-you.html">
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="_honey" style="display:none">
-                </div>
-                <button type="submit">Send</button>
-            </form>
+        <!-- Testimonial for M & S -->
+        <div class="video-and-testimonial">
+            <iframe src="https://player.vimeo.com/video/157802983" frameborder="0" allowfullscreen></iframe>
+            <div class="couple-name">M & S</div>
+            <p class="testimonial-snippet">
+                "Watching the video has enabled us and our families to relive all the wonderful and joyous moments of
+                that day..."
+            </p>
+            <a href="#m-s-testimonial" class="testimonial-link">+</a>
         </div>
-
     </main>
 
-    <script>
-    console.log('JavaScript is running');
+    <!-- Full Testimonial for Jessica & Brian -->
+    <section id="jessica-brian-testimonial" class="testimonial-full">
+        <h2>Jessica & Brian's Testimonial</h2>
+        <p><strong>WE WOULD ABSOLUTELY RECOMMEND SERGE TO ANYONE!!!</strong></p>
+        <p>Serge did an absolutely amazing job! He is extremely talented, creative, professional and easy to get along
+           with (even during all the wedding chaos and stress, when we weren't always our most calm!). The end product
+           was truly incredible. It really blew us away - he captured our most special moments perfectly, and was able
+           to convey the spirit and "feeling" of our day...</p>
 
-    function resizeVideos() {
-        if (window.innerWidth <= 768) {
-            var videos = document.querySelectorAll('.video-and-name-container iframe');
-            videos.forEach(function(video) {
-                video.style.width = '100%';  // Full width for mobile
-                video.style.marginLeft = '0';
-                video.style.height = (video.offsetWidth * 9 / 16) + 'px';
-            });
-        } else {
-            var videos = document.querySelectorAll('.video-and-name-container iframe');
-            videos.forEach(function(video) {
-                video.style.width = '100%';
-                video.style.marginLeft = '0';
-                video.style.height = '510px';
-            });
-        }
-    }
+        <p>He took the time to talk with us several times, to meet with us in person in advance, and to arrive early to scope out the setting. He really put in a lot of time and effort, and we truly feel like he went above and beyond what a normal videographer would do.</p>
 
-    window.addEventListener('load', resizeVideos);
-    window.addEventListener('resize', resizeVideos);
-</script>
+        <p>He is also able to capture those special moments in the perfect way. We had been concerned that having video during the ceremony would be distracting or would take away from the moment. Honestly, it did not! Serge integrated seamlessly and during that most important moment, we didn't even feel like he was there! Yet, the video of that moment is crystal clear and perfect!</p>
+
+        <p>We simply cannot rave about Serge enough. He is a true artist and professional. You will not find anyone who will be as excited to hear about your details or who will put in as much thought into how to capture YOUR special day.</p>
+
+        <a href="#top" class="back-link">Back to Top</a>
+    </section>
+
+    <!-- Full Testimonial for M & S -->
+    <section id="m-s-testimonial" class="testimonial-full">
+        <h2>M & S's Testimonial</h2>
+        <p>Serge's video of our wedding day was truly a work of art! Both the highlight clip and full movie versions fully captured the essence of our day.</p>
+
+        <p>Serge has an amazing talent for being able to blend different parts of the video while creatively incorporating music to punctuate every unspoken thought and emotion. Watching the video has enabled us and our families to relive all the wonderful and joyous moments of that day.</p>
+
+        <p>One of the best parts of working with Serge was that I never once felt that he was intrusive. He was able to film the wedding without interfering, yet captured every candid, funny and heartwarming moment. Serge is highly professional, and creates quality films that last a lifetime!</p>
+
+        <p>I highly recommend his services. The end result is nothing short of perfection. The quality of his work and services are truly unparalleled and we are forever grateful to him for perfectly capturing the best day of our lives!!</p>
+
+        <a href="#top" class="back-link">Back to Top</a>
+    </section>
 
 </body>
 
